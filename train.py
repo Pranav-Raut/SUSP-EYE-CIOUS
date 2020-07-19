@@ -1,33 +1,3 @@
-
-
-r"""Training executable for detection models.
-
-This executable is used to train DetectionModels. There are two ways of
-configuring the training job:
-
-1) A single pipeline_pb2.TrainEvalPipelineConfig configuration file
-can be specified by --pipeline_config_path.
-
-Example usage:
-    ./train \
-        --logtostderr \
-        --train_dir=path/to/train_dir \
-        --pipeline_config_path=pipeline_config.pbtxt
-
-2) Three configuration files can be provided: a model_pb2.DetectionModel
-configuration file to define what type of DetectionModel is being trained, an
-input_reader_pb2.InputReader file to specify what training data will be used and
-a train_pb2.TrainConfig file to configure training parameters.
-
-Example usage:
-    ./train \
-        --logtostderr \
-        --train_dir=path/to/train_dir \
-        --model_config_path=model_config.pbtxt \
-        --train_config_path=train_config.pbtxt \
-        --input_config_path=train_input_config.pbtxt
-"""
-
 import functools
 import json
 import os
